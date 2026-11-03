@@ -1,0 +1,15 @@
+[Desktop Entry]
+Type=Application
+Name=Viewer
+Name[ru]=Просмотр файлов
+Name[uk]=Перегляд файлів
+Comment=View text files, pictures and binary data
+Comment[ru]=Просмотр текстовых файлов, изображений и двоичных данных
+Exec=colibry-viewer %F
+Icon=colibry-viewer
+Terminal=false
+Categories=Utility;Viewer;
+MimeType=text/plain;image/png;image/jpeg;image/gif;image/bmp;image/webp;application/octet-stream;
+Keywords=viewer;text;image;picture;hex;
+StartupNotify=true
+NoDisplay=false
