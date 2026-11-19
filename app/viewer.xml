@@ -1,0 +1,21 @@
+<Window Title="Viewer - Colibry OS" Width="900" Height="620" MinWidth="560" MinHeight="380">
+    <Shortcut Keys="Right" Action="viewer.next"/>
+    <Shortcut Keys="Left" Action="viewer.previous"/>
+    <Shortcut Keys="Space" Action="viewer.play"/>
+    <Shortcut Keys="Escape" Action="app.quit"/>
+    <VBox Spacing="10" Slot.Padding="16">
+        <HBox Spacing="6">
+            <Button Text="Previous" OnClicked="viewer.previous"/>
+            <Button Text="Next" OnClicked="viewer.next"/>
+            <TextInput Name="path" Placeholder="Path of a file" Slot.Fill="1" OnCommitted="viewer.open"/>
+            <Button Name="play" Text="Play" Style="Primary" OnClicked="viewer.play"/>
+            <Button Name="stop" Text="Stop" OnClicked="viewer.stop"/>
+        </HBox>
+        <Switcher Name="switcher" Slot.Fill="1">
+            <TextEditor Name="editor" ReadOnly="true" LineNumbers="true"/>
+            <Image Name="picture"/>
+            <Label Name="message" Wrap="true" TextSize="15" Slot.HAlign="Center" Slot.VAlign="Center"/>
+        </Switcher>
+        <Label Name="status" TextSize="12"/>
+    </VBox>
+</Window>
